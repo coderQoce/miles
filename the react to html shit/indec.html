@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            align-items: center;
+            background-color: bisque;
+        }
+        body{
+            min-height: 100vh;
+        }
+        .navbar {
+            position: relative;
+            border-bottom: 2px;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 12%;
+            transition: all .50s ease;
+        }
+        .nav{
+            display: flex;
+        }
+        .nav a{
+            font-size: 1.1rem;
+            color: black;
+            font-weight: 500;
+            padding: 5px 0;
+            margin: 0px 30px;
+            transition: all .50s ease;
+        }
+        .nav a:hover{
+            color: blue;
+        }
+        .nav a.active{
+            color: blue;
+        }
+        .right{
+            display: flex;
+            align-items: center;
+        }
+        .right a{
+            margin-right: 25px;
+            margin-left: 10px;
+            color: black;
+            border-bottom: 2px solid black;
+        }
+        
+#hero{
+    /* background-image: url(IMG_2668\ \(1\).jpg); */
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+#hero h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+#hero span{
+    color: blue;
+}
+
+#hero button{
+    font-size: 20px;
+    background-image: url(img/button.png);
+    background-color: transparent;
+    color: black;
+    border:0;
+    padding: 5px 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+}
+#hero button:hover{
+    background-color: blue;
+    
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Investment Plans</a></li>
+        </ul>
+        <!-- <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/plans">Investment Plans</Link> -->
+
+        <div class="right">
+            <a href="">Register</a>
+            <a href="">Login</a>
+          <!-- <Link to="/register">Register</Link>
+          <Link to="/login">Login</Link> -->
+        </div>
+    </div>
+
+    <section id="hero">
+        <h1>Build <span>Better</span> &</h1>
+        <h2>Stronger Finance</h2>
+        <p>Here, we have incorporated a strategy <br>
+             that ensures a sustained consistency <br>
+             in generating outstanding daily market revenue.</p><br>
+        <button>Login</button>
+    </section>
+
+</body>
+</html>
