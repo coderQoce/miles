@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f0f0f0;
+        }
+        .whychoose header{
+            width: 85%;
+            margin: auto;
+            text-align: center;
+        }
+        .whychoose .header h1{
+            color: #f15b43;
+            font-size: 50px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .wrap{
+            width: 85%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column; /* Added for responsiveness */
+        }
+        .content, .image { /* Added for responsiveness */
+            width: 100%;
+            margin-bottom: 20px; /* Added for responsiveness */
+        }
+        .content{
+            text-align: center; /* Added for responsiveness */
+        }
+        .content h2{
+            font-size: 30px;
+            color: #284966;
+        }
+        .content p{
+            color: #666;
+            font-size: 19px;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+        .image{
+            width: 100%;
+        }
+        .image img{
+            width: 100%;
+            height: auto;
+        }
+        .content .btn{
+            position: relative;
+            margin-top: 30px;
+            text-decoration: none;
+            border: 2px solid #f15b43;
+            font-size: 19px;
+            color: #f15b43;
+            padding: 13px 16px;
+            display: inline-block;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        .content .btn::before{
+            position: absolute;
+            content: "";
+            border: 1px solid transparent;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: #f15b43;
+            z-index: -1;
+            transition: transform 0.7s;
+            transform-origin: 0 0;
+            transform: scaleX(0);
+            transition-timing-function: cubic-bezier(0.5, 1.5, 0.4 0.7);
+        }
+        .content .btn:hover{
+            color: #fff;
+        }
+        .content .btn:hover::before{
+            transform: scaleX(1);
+        }
+
+        /* Media queries for responsiveness */
+        @media screen and (min-width: 768px) {
+            .wrap {
+                flex-direction: row;
+            }
+            .content, .image {
+                width: 50%;
+                margin-bottom: 0;
+            }
+            .content {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="whychoose">
+        <div class="header">
+            <h1>Why Choose Us?</h1>
+        </div>
+        <div class="wrap">
+            <div class="content">
+                <h2>We can build a better and stronger finance for You</h2>
+                <p>Here, we have incorporated a strategy <br />
+                    that ensures a sustained consistency <br />
+                    in generating outstanding daily market revenue.
+                </p>
+                <a href="#" class="btn">Join Us</a>
+            </div>
+            <div class="image">
+                <img src="whyUs.JPG">
+            </div>
+        </div>   
+    </div>
+</body>
+</html>
