@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <style>
+        /* CSS styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+
+        .transaction-table {
+            margin-bottom: 30px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+
+        tr:hover {
+            background-color: #e9ecef;
+        }
+
+        .clear-button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .clear-button:hover {
+            background-color: #c82333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .transaction-table {
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            .clear-button {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Transaction History</h1>
+        <div class="transaction-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-05-01</td>
+                        <td>Deposited $5000</td>
+                        <td>$5000</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-05</td>
+                        <td>Invested $100</td>
+                        <td>-$100</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-10</td>
+                        <td>Invested $50</td>
+                        <td>-$50</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-15</td>
+                        <td>Deposited $7000</td>
+                        <td>$7000</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-20</td>
+                        <td>Invested $7000</td>
+                        <td>-$7000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="clear-button" onclick="clearHistory()">Clear History</button>
+    </div>
+
+    <script>
+        function clearHistory() {
+            // Function to clear transaction history
+            document.querySelector('tbody').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
